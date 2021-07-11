@@ -1,23 +1,19 @@
 <template>
-  <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+  <v-app id="materialpro" :class="`${!$vuetify.breakpoint.smAndDown ? 'full-sidebar' : 'mini-sidebar'}`">
+      <router-view />
+      <notifications group="notification" position="bottom right"  />
   </v-app>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
-  },
+    
+  }
 
-  data: () => ({
-    //
-  }),
-}
+};
 </script>

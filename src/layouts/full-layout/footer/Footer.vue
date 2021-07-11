@@ -1,0 +1,30 @@
+<template>
+    <v-footer app class="footerpart" inset>
+      <v-col cols="12">
+        <span>© {{ new Date().getFullYear() }} ToDo v{{this.version}}</span>
+      </v-col>
+    </v-footer>
+</template>
+<script>
+
+import constants from '../../../services/constants';
+
+export default {
+    name: "Footer",
+    
+    data:() => ({
+      version: constants.cmsVersion
+    }),
+    mounted(){
+      
+    }
+}
+</script>
+<style lang="scss">
+  .v-application .footerpart{
+    border-top:1px solid rgba(0,0,0,0.1)!important;
+  }
+  .theme--light.v-footer{
+    background:white;
+  }
+</style>
